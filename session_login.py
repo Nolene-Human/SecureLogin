@@ -1,3 +1,5 @@
+
+
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
@@ -23,12 +25,12 @@ def dashboard():
     if 'username' in session:
         return render_template('authorised.html', username=session['username'])
     else:
-        return redirect('/unauthorised')
+        return redirect('/logout')
 
 @app.route('/logout')
 def logout():
     session.pop('username', None)
-    return redirect('/')
+    return render_template('logout.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

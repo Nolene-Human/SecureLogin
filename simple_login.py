@@ -13,13 +13,17 @@ def login():
         if username == 'admin' and password == 'password':
             return redirect('/authorised')
         else:
-            return render_template('login.html', error='Invalid credentials')
+            return render_template('unauthorised.html', error='Invalid credentials')
     
-    return render_template('session_login.html')
+    return render_template('simple_login.html')
 
 @app.route('/authorised')
 def dashboard():
     return 'Welcome to the dashboard!'
+
+@app.route('/logout')
+def logout():
+    return render_template('logout.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
