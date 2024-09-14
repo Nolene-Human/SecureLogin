@@ -13,7 +13,12 @@ This file contains the implementation of the session login functionality.
 
 The session_login module provides functions for handling user login sessions. It includes functions for validating user credentials, creating session tokens, and managing session expiration.
 
-## csrf Login
+## Cross Site Request Forgery prevention login
+
+To prevent CSRF attacks when user authentication is when logging into a web application where their session is authenticated using cookies the following file will be implemented:
+
+a) CSRF Tokens: Include a unique token the server validates in each form submission.
+b) SameSite Cookies: Use the SameSite attribute in cookies to prevent them from being sent with cross-site requests.
 
 ### Prerequisites
 
