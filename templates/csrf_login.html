@@ -21,7 +21,9 @@
     
     <form action="/form_login" method="POST">
 
+        <!-- CSRF token for protection against CSRF attacks -->
         <input type="hidden" name="csrf_token" value ="{{csrf_token()}}"/>
+        
         <h4 style="color:rgb(167, 22, 102)">Start by entering your username</h4>
         
         <input name="username" required></br>
@@ -40,3 +42,4 @@
 
    
 {% endblock %}
+
