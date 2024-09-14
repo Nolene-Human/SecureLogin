@@ -3,13 +3,8 @@
 {% block body %}
 <br>  <br> 
 <div style="text-align:center">
-    <h1 style="color:rgb(167, 22, 102)">Welcome to FANG</h1>
-    <h4>Before you can use this tool, you need to complete the pre-engagement phase of our penetration testing service.</h4>
-    <p> This phase involves defining the scope, objectives, and rules of engagement for the test, as well as signing the contract and the non-disclosure agreement. 
-        If you have not gone through this process, please contact us to start the engagement</p>
-    
-    <a href="https://fang2.onrender.com/">Contact Us</a>
-
+    <h1 style="color:rgb(167, 22, 102)">This Login Page uses CSRF token</h1>
+ 
     <hr style="color:rgb(167, 22, 102);width:100%;text-align:left;margin-left:0">
 </div>
 <br>
@@ -23,7 +18,7 @@
 
         <!-- CSRF token for protection against CSRF attacks -->
         <input type="hidden" name="csrf_token" value ="{{csrf_token()}}"/>
-        
+
         <h4 style="color:rgb(167, 22, 102)">Start by entering your username</h4>
         
         <input name="username" required></br>
