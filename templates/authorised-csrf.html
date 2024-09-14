@@ -1,0 +1,27 @@
+
+
+
+<h1 style="text-align:center">You are authorised to enter this site</h1>
+
+<p>Test CSRF Protection
+    Open the Login Page:
+    
+    Navigate to http://127.0.0.1:5000/ in your web browser.
+    Submit the Form Normally:
+    
+    Enter the username and password, then submit the form. If the credentials are correct, you should be redirected to the authorized page.
+    Test CSRF Protection:
+    
+    Open the browser's developer tools (usually by pressing F12 or Ctrl+Shift+I).
+    Go to the "Network" tab and find the POST request made when you submit the form.
+    Copy the request as cURL (right-click on the request and select "Copy" > "Copy as cURL").
+    Open a terminal and paste the cURL command.
+    Remove the csrf_token parameter from the cURL command and run it.
+    You should receive a 400 Bad Request error, indicating that the CSRF protection is working.</p>
+
+<button onclick="logout()">Logout</button>
+<script>
+    function logout() {
+        window.location.href = "/logout";
+    }
+</script>

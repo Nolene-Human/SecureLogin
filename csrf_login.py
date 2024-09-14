@@ -11,7 +11,7 @@ csrf = CSRFProtect(app)
 class LoginForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
-       submit = SubmitField('Login')
+    submit = SubmitField('Login')
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -29,7 +29,7 @@ def login():
     
     return render_template('csrf_login.html', form=form)
 
-@app.route('/authorised')
+@app.route('/authorised-csrf')
 def dashboard():
     return 'Welcome to the dashboard!'
 
