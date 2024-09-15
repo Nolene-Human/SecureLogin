@@ -13,12 +13,11 @@ This file contains the implementation of the session login functionality.
 
 The session_login module provides functions for handling user login sessions. It includes functions for validating user credentials, creating session tokens, and managing session expiration.
 
-## Cross Site Request Forgery prevention login
+## Cross-Site Request Forgery Prevention login
 
 To prevent CSRF attacks when user authentication is when logging into a web application where their session is authenticated using cookies the following file will be implemented:
 
 a) CSRF Tokens: Include a unique token the server validates in each form submission.
-b) SameSite Cookies: Use the SameSite attribute in cookies to prevent them from being sent with cross-site requests.
 
 ### Prerequisites
 
@@ -26,6 +25,7 @@ Before running this project, make sure you have the following installed:
 
 - Python 3.x
 - Flask
+- Flask-WTF
 
 ### Getting Started
 
@@ -50,7 +50,7 @@ Before running this project, make sure you have the following installed:
 
 ### Contributing
 
-Contributions are welcome! If you have any suggestions or improvements, please open an issue or submit a pull request.
+Contributions are welcome! Please open an issue or submit a pull request if you have any suggestions or improvements.
 
 ### License
 
